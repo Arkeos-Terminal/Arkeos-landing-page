@@ -1,0 +1,56 @@
+/*
+  Arkeos Terminal — custom styles layered on top of Tailwind utilities.
+  Kept separate from index.html so the gradient/glow math is easy to find and retune.
+*/
+
+:root {
+  --arkeos-blue: #0300bb;   /* corner glow, sampled from the source mockup */
+  --arkeos-indigo: #302ebb; /* input border glow, sampled from the source mockup */
+}
+
+html {
+  background: #000;
+}
+
+/*
+  The reference design's background glow isn't a simple centered radial gradient — it hugs the
+  right edge AND the bottom edge, brightest where they meet. Two elongated ellipses anchored at
+  the corner reproduce that "L-shaped" falloff more accurately than one circle would.
+*/
+.arkeos-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #000;
+  background-image:
+    radial-gradient(ellipse 850px 1500px at 100% 100%, rgba(3, 0, 187, 0.55) 0%, rgba(3, 0, 187, 0) 62%),
+    radial-gradient(ellipse 1600px 750px at 100% 100%, rgba(3, 0, 187, 0.45) 0%, rgba(3, 0, 187, 0) 62%);
+  background-repeat: no-repeat;
+}
+
+.arkeos-input {
+  border: 1px solid var(--arkeos-indigo);
+  box-shadow: 0 0 22px 2px rgba(48, 46, 187, 0.4);
+}
+
+.arkeos-input:focus {
+  box-shadow: 0 0 32px 5px rgba(48, 46, 187, 0.65);
+}
+
+.arkeos-button {
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: #000;
+  color: #fff;
+}
+
+.arkeos-button:hover:not(:disabled) {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}

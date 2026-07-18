@@ -1,0 +1,26 @@
+// Vercel Serverless Function — POST /api/waitlist
+// Zero config: Vercel auto-detects any file in /api as a function, no build step needed.
+
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { email } = req.body || {};
+  const isValid = typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (!isValid) {
+    return res.status(400).json({ error: 'Invalid email address' });
+  }
+
+  // TODO: this currently only logs the signup. Wire it to a real destination
+  // before launch — a few common options:
+  //   Resend Audiences  https://resend.com/docs/dashboard/audiences/introduction
+  //   ConvertKit API    https://developers.convertkit.com
+  //   beehiiv API       https://developers.beehiiv.com
+  //   Supabase table    https://supabase.com/docs/guides/database
+  console.log('[waitlist] new signup:', email);
+
+  return res.status(200).json({ success: true });
+};
