@@ -1,0 +1,23 @@
+{
+  "name": "arkeos-landing-page",
+  "version": "1.0.0",
+  "description": "Static HTML/Tailwind landing page built from the Canva mockup, plus a working `/api/waitlist` endpoint so the form actually has somewhere to POST to. Zero build step — deploys to Vercel as-is.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkeos-Terminal/Arkeos-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arkeos-Terminal/Arkeos-landing-page/issues"
+  },
+  "homepage": "https://github.com/Arkeos-Terminal/Arkeos-landing-page#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
