@@ -24,3 +24,22 @@ module.exports = async (req, res) => {
 
   return res.status(200).json({ success: true });
 };
+
+// ... [Your existing script code, if any] ...
+
+
+// === LOOPS WAITLIST INTEGRATION ===
+document.addEventListener("DOMContentLoaded", () => {
+  const LOOPS_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmrpwh87403lq0j12kw6wenco";
+
+  const form = document.getElementById("waitlist-form");
+  const emailInput = document.getElementById("email-input");
+  const submitBtn = document.getElementById("submit-btn");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    // ... handling submission
+  });
+});
