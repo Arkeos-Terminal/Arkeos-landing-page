@@ -20,17 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
     submitBtn.disabled = true;
 
     try {
-      // Send payload directly to Loops endpoint
+      // Use native URLSearchParams for clean encoding
+      const payload = new URLSearchParams();
+      payload.append("email", email);
+
       const response = await fetch(LOOPS_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `email=${encodeURIComponent(email)}&userGroup=Waitlist`,
+        body: payload
       });
 
       if (response.ok) {
-        // Success UI State
+        // Success UI
         submitBtn.innerText = "YOU'RE IN!";
         submitBtn.classList.add("text-emerald-400", "border-emerald-500");
         emailInput.value = "";
@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
           formStatus.className = "font-ui mt-4 text-sm min-h-[1.25em] text-emerald-400";
         }
       } else {
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Loops API Response Error:", response.status, errorData);
         throw new Error("Submission failed");
       }
     } catch (error) {
