@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const LOOPS_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmrpwh874031q0j12kw6wenco";
+  const LOOPS_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmrpwh87403lq0j12kw6wenco";
 
   const form = document.getElementById("waitlist-form");
   const emailInput = document.getElementById("email");
