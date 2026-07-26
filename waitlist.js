@@ -30,16 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
-        // Success UI
-        submitBtn.innerText = "YOU'RE IN!";
-        submitBtn.classList.add("text-emerald-400", "border-emerald-500");
-        emailInput.value = "";
-        emailInput.placeholder = "Transmission Received";
-        emailInput.disabled = true;
-        if (formStatus) {
-          formStatus.innerText = "Spot secured. Check your inbox soon.";
-          formStatus.className = "font-ui mt-4 text-sm min-h-[1.25em] text-emerald-400";
-        }
+        const userEmail = emailInput.value;
+        window.location.href = `/refer?email=${encodeURIComponent(userEmail)}`;
       } else {
         const errorData = await response.json().catch(() => ({}));
         console.error("Loops API Response Error:", response.status, errorData);
