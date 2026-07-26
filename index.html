@@ -16,8 +16,8 @@
   <meta name="twitter:description" content="Execution intelligence for Solana TCGs. Join the waitlist." />
   <meta name="twitter:image" content="/assets/og-image.png" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
   <!--
     Font note: the source design specs "Eurostile Round" (display) and "Canva Sans" (UI/button).
@@ -48,8 +48,7 @@
     };
   </script>
 
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-black text-white font-ui antialiased overflow-x-hidden">
 
@@ -60,7 +59,7 @@
 
     <!-- Logo mark -->
     <img
-      src="logo.png"
+      src="assets/logo.png"
       alt="Arkeos Terminal"
       width="697"
       height="627"
@@ -93,12 +92,12 @@
           autocomplete="email"
           required
           placeholder="you@email.com"
-          class="arkeos-input flex-1 min-w-0 bg-black rounded-2xl px-6 py-4 text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none transition-shadow"
+          class="arkeos-input flex-1 min-w-0 bg-black border border-[#302ebb] rounded-2xl px-6 py-4 text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none transition-shadow"
         />
         <button
           type="submit"
           id="join-btn"
-          class="arkeos-button shrink-0 rounded-2xl px-9 py-4 font-ui font-semibold uppercase tracking-wide text-sm sm:text-base transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          class="arkeos-button shrink-0 bg-black border border-white/90 rounded-2xl px-9 py-4 font-ui font-semibold uppercase tracking-wide text-sm sm:text-base transition-colors hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Join
         </button>
@@ -108,6 +107,6 @@
     </div>
   </main>
 
-  <script src="waitlist.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

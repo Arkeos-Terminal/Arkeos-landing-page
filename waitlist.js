@@ -1,54 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const LOOPS_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmrpwh87403lq0j12kw6wenco";
+// Vercel Serverless Function — POST /api/waitlist
+// Zero config: Vercel auto-detects any file in /api as a function, no build step needed.
 
-  const form = document.getElementById("waitlist-form");
-  const emailInput = document.getElementById("email");
-  const submitBtn = document.getElementById("join-btn");
-  const formStatus = document.getElementById("form-status");
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-  if (!form) return;
+  const { email, ref } = req.body || {};
+  const isValid = typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  if (!isValid) {
+    return res.status(400).json({ error: 'Invalid email address' });
+  }
 
-    const email = emailInput.value.trim();
-    if (!email) return;
+  // TODO: this currently only logs the signup. Wire it to a real destination
+  // before launch, and use `ref` (the code from the referring link, if any)
+  // to credit whoever sent them and increment that person's referral count.
+  //   Resend Audiences  https://resend.com/docs/dashboard/audiences/introduction
+  //   ConvertKit API    https://developers.convertkit.com
+  //   beehiiv API       https://developers.beehiiv.com
+  //   Supabase table    https://supabase.com/docs/guides/database
+  console.log('[waitlist] new signup:', email, ref ? `(referred by ${ref})` : '');
 
-    // Loading State
-    const originalBtnText = submitBtn.innerText;
-    submitBtn.innerText = "JOINING...";
-    submitBtn.disabled = true;
-
-    try {
-      // Use native URLSearchParams for clean encoding
-      const payload = new URLSearchParams();
-      payload.append("email", email);
-
-      const response = await fetch(LOOPS_ENDPOINT, {
-        method: "POST",
-        body: payload
-      });
-
-      if (response.ok) {
-        const userEmail = emailInput.value;
-        window.location.href = `/refer?email=${encodeURIComponent(userEmail)}`;
-      } else {
-        const errorData = await response.json().catch(() => ({}));
-        console.error("Loops API Response Error:", response.status, errorData);
-        throw new Error("Submission failed");
-      }
-    } catch (error) {
-      console.error("Waitlist Error:", error);
-      submitBtn.innerText = "TRY AGAIN";
-      submitBtn.disabled = false;
-      if (formStatus) {
-        formStatus.innerText = "Something went wrong. Please try again.";
-        formStatus.className = "font-ui mt-4 text-sm min-h-[1.25em] text-red-400";
-      }
-      setTimeout(() => {
-        submitBtn.innerText = originalBtnText;
-        if (formStatus) formStatus.innerText = "";
-      }, 3000);
-    }
-  });
-});
+  return res.status(200).json({ success: true });
+};

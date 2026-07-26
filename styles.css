@@ -54,3 +54,38 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* --- refer.html --- */
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.9rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: filter 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.share-btn-x {
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: #fff;
+}
+
+.share-btn-x:hover {
+  background: #fff;
+  color: #000;
+}
+
+.share-btn-send {
+  background: var(--arkeos-indigo);
+  border: 1px solid var(--arkeos-indigo);
+  color: #fff;
+}
+
+.share-btn-send:hover {
+  filter: brightness(1.15);
+}

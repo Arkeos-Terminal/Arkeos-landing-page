@@ -6,8 +6,10 @@ build step — deploys to Vercel as-is.
 
 ```
 ├── index.html          entry point
+├── refer.html           post-signup page: referral link, tier, share actions
 ├── styles.css           corner glow + input/button glow (kept out of Tailwind arbitrary values)
-├── script.js             form submit handling, loading/success/error states
+├── script.js             form submit handling, redirects to refer.html on success
+├── refer.js              tier calculation, copy-to-clipboard, share actions
 ├── api/waitlist.js      Vercel serverless function — receives the email POST
 ├── assets/
 │   ├── logo.png           cropped + made transparent from your source file
@@ -18,12 +20,13 @@ build step — deploys to Vercel as-is.
 ```
 
 ## Run locally
-No build step, so any static server works:
+Paths are relative, so you can just double-click `index.html` and it'll
+render correctly — no server required for that. The one thing that won't
+work by double-clicking is the actual form submission, since `/api/waitlist`
+is a Vercel serverless function and needs Vercel's environment to run:
 ```bash
-npx serve .
+npx vercel dev
 ```
-The `/api/waitlist` route only runs under Vercel's environment, so for local
-testing of the full flow use the Vercel CLI instead: `npx vercel dev`.
 
 ## Deploy
 Push to a GitHub repo and import it in Vercel, or:
@@ -68,6 +71,27 @@ swapping in a real `.svg` would look crisper at very large sizes.
 persisted yet. Before launch, wire the `TODO` in that file to an actual
 destination: Resend Audiences, ConvertKit, beehiiv, or a Supabase table are
 all a handful of lines from where it is now.
+
+## The referral flow
+Submitting the form redirects to `refer.html`, which shows a referral link
+and Post on X / Send Link buttons, with a line of copy telling people
+referring moves them up the queue.
+
+**Worth knowing:** there's no tracking behind that copy. The referral code
+is generated client-side and saved to `localStorage` so the link is real and
+personal-feeling, but nothing counts clicks or signups against it, and
+nothing actually reorders anyone's position. That's a deliberate choice for
+now, not an oversight — just flagging it here so it doesn't surprise anyone
+digging through the code later. `?ref=CODE` is still captured from the URL
+and sent to `/api/waitlist` in the POST body if you want to hook up real
+tracking down the line; the endpoint just logs it for now.
+
+## A note on Copy / Send Link locally
+`navigator.clipboard` and `navigator.share` both require a secure context
+(https, or `localhost`) — they may silently fail or no-op when `refer.html`
+is opened straight from disk via `file://`. Both work fine once deployed on
+Vercel. The Copy button falls back to auto-selecting the link text if the
+clipboard API isn't available, so it's never a dead end.
 
 ## Colors used
 Sampled directly from your PNG mockup rather than eyeballed:
