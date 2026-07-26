@@ -1,27 +1,37 @@
 // Vercel Serverless Function — POST /api/waitlist
 // Zero config: Vercel auto-detects any file in /api as a function, no build step needed.
 
-module.exports = async (req, res) => {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form"); // or document.getElementById("your-form-id")
+  const emailInput = document.querySelector('input[type="email"]');
 
-  const { email, ref } = req.body || {};
-  const isValid = typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!form) return;
 
-  if (!isValid) {
-    return res.status(400).json({ error: 'Invalid email address' });
-  }
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  // TODO: this currently only logs the signup. Wire it to a real destination
-  // before launch, and use `ref` (the code from the referring link, if any)
-  // to credit whoever sent them and increment that person's referral count.
-  //   Resend Audiences  https://resend.com/docs/dashboard/audiences/introduction
-  //   ConvertKit API    https://developers.convertkit.com
-  //   beehiiv API       https://developers.beehiiv.com
-  //   Supabase table    https://supabase.com/docs/guides/database
-  console.log('[waitlist] new signup:', email, ref ? `(referred by ${ref})` : '');
+    const email = emailInput.value.trim();
+    if (!email) return;
 
-  return res.status(200).json({ success: true });
-};
+    try {
+      // Your Loops API endpoint URL
+      const LOOPS_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmrpwh87403lq0j12kw6wenco";
+
+      const response = await fetch(LOOPS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email }),
+      });
+
+      if (response.ok) {
+        // Redirect to referral page with email in URL
+        window.location.href = `/refer?email=${encodeURIComponent(email)}`;
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      alert("Submission failed. Check your connection.");
+    }
+  });
+});
