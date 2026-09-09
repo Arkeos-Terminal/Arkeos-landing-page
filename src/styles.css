@@ -12,8 +12,8 @@
   --color-line-strong: rgb(255 255 255 / 0.22);
   --color-surface: #070708;
   --color-surface-2: #121214;
-  --color-glow: #d946ef;
-  --color-glow-deep: #6d28d9;
+  --color-glow: #c400ff;
+  --color-glow-deep: #6b00a8;
   --color-danger: #f87171;
   --color-ok: #4ade80;
 
@@ -22,9 +22,9 @@
   --radius-panel: 1.25rem;
   --radius-lg: 0.75rem;
 
-  --tracking-brand: 0.28em;
+  --tracking-brand: 0.22em;
 
-  --shadow-focus: 0 0 0 3px rgb(217 70 239 / 0.22);
+  --shadow-focus: 0 0 0 3px rgb(196 0 255 / 0.28);
 
   --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --default-transition-duration: 150ms;
@@ -69,29 +69,53 @@
 }
 
 @layer components {
+  /* Canva wash: electric purple/magenta bands at the edges, black center.
+     Sampled from the mockup — not fuchsia-pink, not radial blobs. */
   .glow-top {
-    background: radial-gradient(
-      ellipse 90% 70% at 50% -5%,
-      rgb(217 70 239 / 0.42) 0%,
-      rgb(109 40 217 / 0.18) 38%,
-      transparent 70%
+    background: linear-gradient(
+      to bottom,
+      rgb(150 0 200 / 0.9) 0%,
+      rgb(130 0 180 / 0.52) 12%,
+      rgb(90 0 145 / 0.22) 28%,
+      rgb(40 0 70 / 0.06) 46%,
+      transparent 64%
     );
   }
 
   .glow-bottom {
-    background: radial-gradient(
-      ellipse 100% 90% at 50% 110%,
-      rgb(217 70 239 / 0.55) 0%,
-      rgb(109 40 217 / 0.28) 42%,
-      transparent 74%
+    background: linear-gradient(
+      to top,
+      rgb(196 0 255 / 0.95) 0%,
+      rgb(168 0 220 / 0.58) 14%,
+      rgb(110 0 175 / 0.26) 32%,
+      rgb(50 0 90 / 0.07) 50%,
+      transparent 70%
     );
   }
 
   .docs-chip {
     background:
       linear-gradient(#050505, #050505) padding-box,
-      linear-gradient(135deg, #f0abfc 0%, #d946ef 42%, #6d28d9 100%) border-box;
+      linear-gradient(120deg, #f0abfc 0%, #d946ef 40%, #7c3aed 100%) border-box;
     border: 1px solid transparent;
+  }
+
+  .glow-ring {
+    background:
+      linear-gradient(#070708, #070708) padding-box,
+      linear-gradient(120deg, #e879f9 0%, #c026d3 48%, #6d28d9 100%) border-box;
+    border: 1.5px solid transparent;
+  }
+
+  .glow-ring-join {
+    background:
+      linear-gradient(#1c1224, #140e1c) padding-box,
+      linear-gradient(120deg, #fae8ff 0%, #e879f9 36%, #c026d3 72%, #7c3aed 100%) border-box;
+    border: 2px solid transparent;
+    box-shadow:
+      0 0 32px rgb(196 0 255 / 0.42),
+      0 0 12px rgb(217 70 239 / 0.35),
+      0 10px 28px rgb(0 0 0 / 0.55);
   }
 
   .card-surface {

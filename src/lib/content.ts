@@ -142,13 +142,7 @@ export const termsOfService: LegalBlock = {
       ],
     },
     {
-      title: "10. Governing Law",
-      body: [
-        `These Terms are governed by the laws of ${site.governingLaw}, without regard to conflict-of-law principles.`,
-      ],
-    },
-    {
-      title: "11. Contact",
+      title: "10. Contact",
       body: [`Questions about these Terms: ${site.supportEmail}`],
     },
   ],

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Wordmark } from "@/components/brand-mark";
-import { IconMail, IconX } from "@/components/icons";
+import { IconArrowLeft, IconMail, IconX } from "@/components/icons";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -37,6 +37,16 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/"
+              className={cn(
+                "mt-1 flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-muted",
+                "transition-colors duration-quick hover:text-fg",
+              )}
+            >
+              <IconArrowLeft />
+              Back
+            </Link>
           </nav>
 
           <div className="mt-auto hidden flex-col gap-3 border-t border-line pt-6 lg:flex">

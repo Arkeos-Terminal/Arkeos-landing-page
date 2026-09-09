@@ -17,9 +17,5 @@ export const site = {
   xHandle: "@arkeosxyz",
   email: "terminal@arkeos.xyz",
   supportEmail: "support@arkeos.xyz",
-  /**
-   * Governing law named in the Terms. Replace if you incorporate elsewhere.
-   */
-  governingLaw: "the State of Delaware, United States",
   lastUpdated: "09/08/26",
 } as const;

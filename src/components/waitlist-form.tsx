@@ -56,7 +56,7 @@ export function WaitlistForm({ className }: { className?: string }) {
     <form
       onSubmit={onSubmit}
       className={cn(
-        "hero-enter hero-enter-d3 flex w-full max-w-md flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center",
+        "hero-enter hero-enter-d3 flex w-full max-w-lg flex-col items-stretch gap-3 sm:flex-row sm:items-center",
         className,
       )}
       noValidate
@@ -81,10 +81,10 @@ export function WaitlistForm({ className }: { className?: string }) {
         }}
         disabled={status === "submitting"}
         className={cn(
-          "h-12 min-h-12 flex-1 rounded-pill border border-line bg-surface px-5",
+          "glow-ring h-12 min-h-12 flex-1 rounded-pill px-5",
           "text-sm text-fg placeholder:text-subtle",
-          "transition-[border-color,box-shadow] duration-quick ease-out",
-          "focus-visible:border-line-strong focus-visible:outline-none focus-visible:shadow-focus",
+          "transition-[filter,box-shadow] duration-quick ease-out",
+          "focus-visible:outline-none focus-visible:shadow-focus",
           "disabled:opacity-60",
         )}
       />
@@ -92,10 +92,10 @@ export function WaitlistForm({ className }: { className?: string }) {
         type="submit"
         disabled={status === "submitting"}
         className={cn(
-          "h-12 min-h-12 shrink-0 rounded-pill border border-line-strong bg-surface-2 px-7",
+          "glow-ring-join h-12 min-h-12 shrink-0 rounded-pill px-8",
           "text-sm font-medium text-fg",
-          "transition-[transform,background-color,border-color] duration-quick ease-out",
-          "hover:border-fg/40 hover:bg-surface-2",
+          "transition-[transform,filter] duration-quick ease-out",
+          "hover:brightness-125",
           "active:scale-press",
           "disabled:opacity-60",
         )}
