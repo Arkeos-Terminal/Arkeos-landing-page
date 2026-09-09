@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-bg: #000000;
+  --color-fg: #f4f4f5;
+  --color-muted: #8b8b94;
+  --color-subtle: #5c5c66;
+  --color-line: rgb(255 255 255 / 0.12);
+  --color-line-strong: rgb(255 255 255 / 0.22);
+  --color-surface: #070708;
+  --color-surface-2: #121214;
+  --color-glow: #d946ef;
+  --color-glow-deep: #6d28d9;
+  --color-danger: #f87171;
+  --color-ok: #4ade80;
+
+  --radius-pill: 999px;
+  --radius-card: 1.5rem;
+  --radius-panel: 1.25rem;
+  --radius-lg: 0.75rem;
+
+  --tracking-brand: 0.28em;
+
+  --shadow-focus: 0 0 0 3px rgb(217 70 239 / 0.22);
+
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --default-transition-duration: 150ms;
+}
+
+@layer base {
+  html {
+    background: #000;
+    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: #000;
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@utility scale-press {
+  scale: 0.96;
+}
+
+@utility duration-quick {
+  transition-duration: 150ms;
+}
+
+@layer components {
+  .glow-top {
+    background: radial-gradient(
+      ellipse 90% 70% at 50% -5%,
+      rgb(217 70 239 / 0.42) 0%,
+      rgb(109 40 217 / 0.18) 38%,
+      transparent 70%
+    );
+  }
+
+  .glow-bottom {
+    background: radial-gradient(
+      ellipse 100% 90% at 50% 110%,
+      rgb(217 70 239 / 0.55) 0%,
+      rgb(109 40 217 / 0.28) 42%,
+      transparent 74%
+    );
+  }
+
+  .docs-chip {
+    background:
+      linear-gradient(#050505, #050505) padding-box,
+      linear-gradient(135deg, #f0abfc 0%, #d946ef 42%, #6d28d9 100%) border-box;
+    border: 1px solid transparent;
+  }
+
+  .card-surface {
+    background: rgb(0 0 0 / 0.55);
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.12);
+  }
+
+  .hero-enter {
+    animation: hero-in 500ms var(--ease-out-smooth) both;
+  }
+
+  .hero-enter-d1 {
+    animation-delay: 40ms;
+  }
+  .hero-enter-d2 {
+    animation-delay: 120ms;
+  }
+  .hero-enter-d3 {
+    animation-delay: 200ms;
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter {
+    animation: none;
+  }
+}

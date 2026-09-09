@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://arkeos.xyz/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://arkeos.xyz/docs</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://arkeos.xyz/docs/updates</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://arkeos.xyz/docs/legal</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
