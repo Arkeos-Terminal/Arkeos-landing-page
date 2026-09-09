@@ -1,22 +1,25 @@
 import { cn } from "@/lib/utils";
 
-/**
- * Official Arkeos A: two parallelograms traced from the source PNG
- * (IoU 0.998). The inner vertex of the right stroke is the A-notch,
- * not the left bar — that false corner was filling the hole.
- */
+/** Official A-mark, cropped from the source PNG. */
 export function BrandMark({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 865 748"
-      className={cn("shrink-0 fill-current", className)}
-      aria-hidden="true"
-      focusable="false"
-    >
-      <polygon points="143,500 431,500 288,748 0,748" />
-      <polygon points="433,0 289,249 577,748 865,748" />
-    </svg>
+    <img
+      src="/logo.png"
+      alt=""
+      className={cn("shrink-0 object-contain", className)}
+      draggable={false}
+    />
   );
+}
+
+function LockupType({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <span className={cn("lockup-type", className)}>{children}</span>;
 }
 
 export function Wordmark({
@@ -28,10 +31,10 @@ export function Wordmark({
 }) {
   return (
     <div className={cn("flex items-center gap-3", className)}>
-      <BrandMark className={cn("text-fg", markClassName ?? "h-9 w-auto")} />
+      <BrandMark className={cn(markClassName ?? "h-9 w-auto")} />
       <div className="flex flex-col justify-center leading-none">
-        <span className="text-[13px] font-semibold tracking-brand text-fg">ARKEOS</span>
-        <span className="mt-1 text-[13px] font-medium tracking-brand text-fg">TERMINAL</span>
+        <LockupType className="text-[11px] sm:text-xs">ARKEOS</LockupType>
+        <LockupType className="mt-[0.7em] text-[11px] sm:text-xs">TERMINAL</LockupType>
       </div>
     </div>
   );
@@ -40,14 +43,12 @@ export function Wordmark({
 export function HeroLockup() {
   return (
     <div className="flex items-center gap-4 sm:gap-5">
-      <BrandMark className="h-14 w-auto text-fg sm:h-16" />
+      <BrandMark className="h-[4.5rem] w-auto sm:h-[5.25rem]" />
       <div className="flex flex-col justify-center leading-none">
-        <span className="text-[1.2rem] font-semibold tracking-brand text-fg sm:text-[1.45rem]">
-          ARKEOS
-        </span>
-        <span className="mt-1.5 text-[1.2rem] font-medium tracking-brand text-fg sm:text-[1.45rem]">
+        <LockupType className="text-[1.05rem] sm:text-[1.35rem]">ARKEOS</LockupType>
+        <LockupType className="mt-[0.7em] text-[1.05rem] sm:text-[1.35rem]">
           TERMINAL
-        </span>
+        </LockupType>
       </div>
     </div>
   );
