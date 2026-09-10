@@ -8,8 +8,7 @@ export const Route = createFileRoute("/")({ component: Home });
 function Home() {
   return (
     <main className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-bg text-fg">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[40vh] glow-top" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[44vh] glow-bottom" />
+      <div className="pointer-events-none absolute inset-0 glow-field" />
 
       <header className="relative z-10 flex justify-end px-5 pt-5 sm:px-8 sm:pt-7">
         <Link
