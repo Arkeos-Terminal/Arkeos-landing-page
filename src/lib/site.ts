@@ -9,7 +9,7 @@ export const LOOPS_FORM_ENDPOINT = "ENTER_LOOPS_ENDPOINT_HERE";
 export const site = {
   name: "Arkeos Terminal",
   shortName: "Arkeos",
-  url: "https://arkeos.xyz",
+  url: "https://www.arkeos.xyz",
   description:
     "Arkeos is the terminal for tokenized TCGs. You'll be invited for early access as soon as we launch.",
   tagline: "The terminal for tokenized TCGs.",

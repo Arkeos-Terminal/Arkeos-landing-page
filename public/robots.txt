@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arkeos.xyz/sitemap.xml
+User-agent: Twitterbot
+Allow: /
+
+Sitemap: https://www.arkeos.xyz/sitemap.xml

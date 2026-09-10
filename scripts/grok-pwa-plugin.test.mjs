@@ -130,6 +130,7 @@ test("a baked site.image is treated as a custom card", () => {
     site: { title: "Wild Race", image: "/og.jpg" },
   });
   assert.match(out, /property="og:image" content="https:\/\/wild-race\.grok\.me\/og\.jpg"/);
+  assert.match(out, /name="twitter:image" content="https:\/\/wild-race\.grok\.me\/og\.jpg"/);
   assert.doesNotMatch(out, /og\.grok\.me/);
 });
 
@@ -295,6 +296,7 @@ test("vercel Host without a public hostname emits no og:image", () => {
       site: { title: "RACK", card: "custom" },
     });
     assert.doesNotMatch(out, /property="og:image"/);
+    assert.doesNotMatch(out, /name="twitter:image"/);
     assert.doesNotMatch(out, /vercel\.app/);
   } finally {
     if (prev === undefined) delete process.env.VITE_PUBLIC_HOSTNAME;
@@ -320,6 +322,7 @@ test("emits og:image for a public host and prefers a custom card", () => {
     site: { title: "Wild Race", card: "custom", type: "x:game" },
   });
   assert.match(custom, /property="og:image" content="https:\/\/wild-race\.grok\.me\/og\.jpg"/);
+  assert.match(custom, /name="twitter:image" content="https:\/\/wild-race\.grok\.me\/og\.jpg"/);
   assert.match(custom, /property="og:type" content="x:game"/);
 });
 
