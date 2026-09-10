@@ -255,9 +255,9 @@ export function readOgSite(cwd = process.cwd()) {
 /** Public path of an on-disk share card, or "" if neither file exists. */
 export function ogCardPublicPath(cwd = process.cwd()) {
   // Prefer a versioned filename so scrapers (X) don't reuse a cached /og.jpg.
-  if (existsSync(join(cwd, "public/card.jpg"))) return "/card.jpg";
-  if (existsSync(join(cwd, "public/og.jpg"))) return "/og.jpg";
-  if (existsSync(join(cwd, "public/og.png"))) return "/og.png";
+  if (existsSync(join(cwd, "public/linkpreview.png"))) return "/linkpreview.png";
+  if (existsSync(join(cwd, "public/linkpreview.png"))) return "/linkpreview.png";
+  if (existsSync(join(cwd, "public/linkpreview.png"))) return "/linkpreview.png";
   return "";
 }
 
@@ -362,7 +362,7 @@ export function grokOgHeadTags({
     const custom = Boolean(asset);
     let image = custom
       ? `https://${publicHost}${asset.startsWith("/") ? asset : `/${asset}`}`
-      : `${ogServiceUrl()}/v1/card.png?host=${encodeURIComponent(publicHost)}&title=${encodeURIComponent(title)}`;
+      : `${ogServiceUrl()}/v1/linkpreview.png?host=${encodeURIComponent(publicHost)}&title=${encodeURIComponent(title)}`;
     const color = !custom ? placeholderCardColor(site) : "";
     if (color) image += `&color=${encodeURIComponent(color)}`;
     tags.push(`<meta property="og:image" content="${escapeHtml(image)}">`);
