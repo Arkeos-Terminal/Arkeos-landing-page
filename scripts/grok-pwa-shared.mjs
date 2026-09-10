@@ -254,6 +254,8 @@ export function readOgSite(cwd = process.cwd()) {
 
 /** Public path of an on-disk share card, or "" if neither file exists. */
 export function ogCardPublicPath(cwd = process.cwd()) {
+  // Prefer a versioned filename so scrapers (X) don't reuse a cached /og.jpg.
+  if (existsSync(join(cwd, "public/card.jpg"))) return "/card.jpg";
   if (existsSync(join(cwd, "public/og.jpg"))) return "/og.jpg";
   if (existsSync(join(cwd, "public/og.png"))) return "/og.png";
   return "";
@@ -356,7 +358,6 @@ export function grokOgHeadTags({
     tags.push(`<meta property="og:type" content="x:game">`);
   }
   if (publicHost) {
-    tags.push(`<meta property="og:url" content="https://${escapeHtml(publicHost)}/">`);
     const asset = resolveOgCardAsset(site, cwd);
     const custom = Boolean(asset);
     let image = custom
@@ -364,14 +365,14 @@ export function grokOgHeadTags({
       : `${ogServiceUrl()}/v1/card.png?host=${encodeURIComponent(publicHost)}&title=${encodeURIComponent(title)}`;
     const color = !custom ? placeholderCardColor(site) : "";
     if (color) image += `&color=${encodeURIComponent(color)}`;
-    const imageVersion = String(site.imageVersion ?? "").trim();
-    if (custom && imageVersion) {
-      image += `${image.includes("?") ? "&" : "?"}v=${encodeURIComponent(imageVersion)}`;
-    }
     tags.push(`<meta property="og:image" content="${escapeHtml(image)}">`);
     tags.push(`<meta name="twitter:image" content="${escapeHtml(image)}">`);
     tags.push(`<meta property="og:image:width" content="1200">`);
     tags.push(`<meta property="og:image:height" content="630">`);
+    if (custom) {
+      tags.push(`<meta property="og:image:type" content="image/jpeg">`);
+      tags.push(`<meta property="og:image:secure_url" content="${escapeHtml(image)}">`);
+    }
     const banner = String(site.banner ?? "").trim();
     if (banner) {
       const bannerUrl = `https://${publicHost}${banner.startsWith("/") ? banner : `/${banner}`}`;
