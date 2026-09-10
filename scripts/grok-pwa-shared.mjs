@@ -369,9 +369,8 @@ export function grokOgHeadTags({
     tags.push(`<meta property="og:image:width" content="1200">`);
     tags.push(`<meta property="og:image:height" content="630">`);
     if (custom) {
-      const mime = asset.toLowerCase().endsWith(".png") ? "image/png" : "image/jpeg";
+      const mime = String(asset).toLowerCase().endsWith(".png") ? "image/png" : "image/jpeg";
       tags.push(`<meta property="og:image:type" content="${mime}">`);
-      tags.push(`<meta property="og:image:secure_url" content="${escapeHtml(image)}">`);
     }
     const banner = String(site.banner ?? "").trim();
     if (banner) {
