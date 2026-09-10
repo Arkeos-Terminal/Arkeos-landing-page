@@ -4,7 +4,7 @@
  *
  * Example: https://app.loops.so/api/newsletter-form/clxxxxxxxx
  */
-export const LOOPS_FORM_ENDPOINT = "ENTER_LOOPS_ENDPOINT_HERE";
+export const LOOPS_FORM_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmrpwh87403lq0j12kw6wenco";
 
 export const site = {
   name: "Arkeos Terminal",
