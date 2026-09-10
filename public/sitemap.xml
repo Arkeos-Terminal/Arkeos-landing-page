@@ -5,6 +5,10 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://www.arkeos.xyz/join</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://www.arkeos.xyz/docs</loc>
     <changefreq>weekly</changefreq>
   </url>

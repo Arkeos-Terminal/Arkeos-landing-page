@@ -33,7 +33,6 @@ export const Route = createRootRoute({
         href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap",
       },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "canonical", href: site.url },
     ],
   }),
   component: RootDocument,
