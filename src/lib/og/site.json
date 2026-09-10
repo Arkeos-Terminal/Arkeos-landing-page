@@ -2,5 +2,6 @@
   "title": "Arkeos Terminal",
   "description": "Arkeos is the terminal for tokenized TCGs. You'll be invited for early access as soon as we launch.",
   "card": "custom",
-  "color": "000000"
+  "color": "000000",
+  "imageVersion": "3"
 }

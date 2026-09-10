@@ -20,27 +20,29 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
             <Wordmark markClassName="h-8 w-auto" />
           </Link>
 
-          <nav aria-label="Docs" className="flex flex-row gap-1 lg:flex-col">
-            {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                activeOptions={{ exact: item.exact }}
-                className={cn(
-                  "rounded-lg px-3 py-2.5 text-sm text-muted transition-colors duration-quick",
-                  "hover:text-fg",
-                )}
-                activeProps={{
-                  className: "text-fg",
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <nav aria-label="Docs" className="flex flex-col gap-1">
+            <div className="flex flex-row flex-wrap gap-1 lg:flex-col">
+              {nav.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  activeOptions={{ exact: item.exact }}
+                  className={cn(
+                    "inline-flex min-h-11 items-center rounded-lg px-3 py-2.5 text-sm text-muted transition-colors duration-quick",
+                    "hover:text-fg",
+                  )}
+                  activeProps={{
+                    className: "text-fg",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
             <Link
               to="/"
               className={cn(
-                "mt-1 flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-muted",
+                "inline-flex min-h-11 w-fit items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-muted",
                 "transition-colors duration-quick hover:text-fg",
               )}
             >

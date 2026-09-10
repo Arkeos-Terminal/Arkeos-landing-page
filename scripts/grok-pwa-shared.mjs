@@ -364,6 +364,10 @@ export function grokOgHeadTags({
       : `${ogServiceUrl()}/v1/card.png?host=${encodeURIComponent(publicHost)}&title=${encodeURIComponent(title)}`;
     const color = !custom ? placeholderCardColor(site) : "";
     if (color) image += `&color=${encodeURIComponent(color)}`;
+    const imageVersion = String(site.imageVersion ?? "").trim();
+    if (custom && imageVersion) {
+      image += `${image.includes("?") ? "&" : "?"}v=${encodeURIComponent(imageVersion)}`;
+    }
     tags.push(`<meta property="og:image" content="${escapeHtml(image)}">`);
     tags.push(`<meta name="twitter:image" content="${escapeHtml(image)}">`);
     tags.push(`<meta property="og:image:width" content="1200">`);
