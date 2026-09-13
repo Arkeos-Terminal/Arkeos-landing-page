@@ -12,7 +12,6 @@ export const site = {
   url: "https://www.arkeos.xyz",
   description:
     "Arkeos is the terminal for tokenized TCGs. You'll be invited for early access as soon as we launch.",
-  tagline: "The terminal for tokenized TCGs.",
   xUrl: "https://x.com/arkeosxyz",
   xHandle: "@arkeosxyz",
   email: "terminal@arkeos.xyz",
