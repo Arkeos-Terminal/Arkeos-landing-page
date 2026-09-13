@@ -4,4 +4,13 @@ Allow: /
 User-agent: Twitterbot
 Allow: /
 
+User-agent: TelegramBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
 Sitemap: https://www.arkeos.xyz/sitemap.xml

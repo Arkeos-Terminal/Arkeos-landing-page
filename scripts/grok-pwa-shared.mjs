@@ -14,6 +14,7 @@ const SHARE_META_KEYS = new Set([
   "og:title",
   "og:description",
   "og:image",
+  "og:image:secure_url",
   "og:image:width",
   "og:image:height",
   "og:type",
@@ -254,7 +255,6 @@ export function readOgSite(cwd = process.cwd()) {
 
 /** Public path of an on-disk share card, or "" if neither file exists. */
 export function ogCardPublicPath(cwd = process.cwd()) {
-  if (existsSync(join(cwd, "public/linkpreview.png"))) return "/linkpreview.png";
   if (existsSync(join(cwd, "public/og.jpg"))) return "/og.jpg";
   if (existsSync(join(cwd, "public/og.png"))) return "/og.png";
   return "";
@@ -270,9 +270,18 @@ function detectCustomOgCard(cwd = process.cwd(), site = {}) {
 export function snapshotOgIdentity(cwd = process.cwd()) {
   const site = { ...readOgSite(cwd) };
   const disk = ogCardPublicPath(cwd);
-  if (disk) {
+  const named = String(site.image ?? "").trim();
+  const namedFile = named.replace(/^\//, "");
+  const namedDisk =
+    namedFile && existsSync(join(cwd, "public", namedFile))
+      ? named.startsWith("/")
+        ? named
+        : `/${named}`
+      : "";
+  const resolved = disk || namedDisk;
+  if (resolved) {
     site.card = "custom";
-    site.image = disk;
+    site.image = resolved;
   } else {
     // site.json `card=custom` without a file must not bake a 404 /og.jpg URL.
     if (siteHasCustomCard(site)) delete site.card;
@@ -342,11 +351,13 @@ export function grokOgHeadTags({
   cwd = process.cwd(),
 } = {}) {
   const title = resolveOgTitle(site, appName, host, documentTitle);
-  const publicHost = resolvePublicHost(host);
+  let publicHost = resolvePublicHost(host);
+  if (publicHost === "arkeos.xyz") publicHost = "www.arkeos.xyz";
   const tags = [
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta property="og:title" content="${escapeHtml(title)}">`,
     `<meta name="twitter:title" content="${escapeHtml(title)}">`,
+    `<meta property="og:site_name" content="${escapeHtml(title)}">`,
   ];
   const description = String(site.description ?? "").trim();
   if (description) {
@@ -355,6 +366,8 @@ export function grokOgHeadTags({
   }
   if (String(site.type ?? "").toLowerCase() === "x:game") {
     tags.push(`<meta property="og:type" content="x:game">`);
+  } else {
+    tags.push(`<meta property="og:type" content="website">`);
   }
   if (publicHost) {
     const asset = resolveOgCardAsset(site, cwd);
@@ -365,6 +378,7 @@ export function grokOgHeadTags({
     const color = !custom ? placeholderCardColor(site) : "";
     if (color) image += `&color=${encodeURIComponent(color)}`;
     tags.push(`<meta property="og:image" content="${escapeHtml(image)}">`);
+    tags.push(`<meta property="og:image:secure_url" content="${escapeHtml(image)}">`);
     tags.push(`<meta name="twitter:image" content="${escapeHtml(image)}">`);
     tags.push(`<meta property="og:image:width" content="1200">`);
     tags.push(`<meta property="og:image:height" content="630">`);
