@@ -19,6 +19,4 @@ TanStack Start, Vite, Tailwind v4. Body copy is JetBrains Mono. The lockup wordm
 
 ## Brand
 
-The A is the official PNG (`public/logo.png`). ARKEOS / TERMINAL next to it is Jura Bold with `letter-spacing: 0.8em` (Canva tracking 800).
-
-The page and the Open Graph card share a diagonal field: solid black in the top-left, fading to magenta-purple toward the right. The share card is `public/linkpreview.png` (lockup only, Jura at 800 tracking, no tagline).
+The site lockup and the X share card are the same file: `public/linkpreview.png` (A-mark + ARKEOS / TERMINAL in Jura at 800 tracking, no tagline).

@@ -17,7 +17,7 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:flex-row lg:items-start lg:gap-5 lg:px-8 lg:py-8">
         <aside className="card-surface flex w-full shrink-0 flex-col gap-6 rounded-card p-5 sm:p-6 lg:sticky lg:top-8 lg:h-[calc(100dvh-4rem)] lg:w-64 lg:gap-8 lg:p-6">
           <Link to="/" className="self-start" aria-label="Arkeos Terminal home">
-            <Wordmark markClassName="h-8 w-auto" />
+            <Wordmark />
           </Link>
 
           <nav aria-label="Docs" className="flex flex-col gap-1">
