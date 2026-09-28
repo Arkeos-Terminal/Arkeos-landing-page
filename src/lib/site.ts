@@ -7,7 +7,7 @@
 export const LOOPS_FORM_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmrpwh87403lq0j12kw6wenco";
 
 export const site = {
-  name: "Arkeos Terminal",
+  name: "Arkeos",
   shortName: "Arkeos",
   url: "https://www.arkeos.xyz",
   description:

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/docs")({
       { title: `Docs — ${site.name}` },
       {
         name: "description",
-        content: "About Arkeos Terminal, product updates, and legal.",
+        content: "About Arkeos, product updates, and legal.",
       },
     ],
   }),

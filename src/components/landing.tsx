@@ -19,11 +19,11 @@ export function Landing() {
       </header>
 
       <section className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 pb-24 pt-8">
-        <div className="hero-enter">
+        <div className="hero-enter flex w-full justify-center">
           <HeroLockup />
         </div>
 
-        <h1 className="hero-enter hero-enter-d1 mt-12 text-center text-[2.35rem] font-medium leading-tight tracking-tight text-fg sm:mt-14 sm:text-5xl">
+        <h1 className="hero-enter hero-enter-d1 mt-8 text-center text-[2.35rem] font-medium leading-tight tracking-tight text-fg sm:mt-10 sm:text-5xl">
           Coming soon
         </h1>
         <p className="hero-enter hero-enter-d2 mt-5 text-center text-sm leading-relaxed text-muted sm:text-[15px]">

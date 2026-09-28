@@ -17,7 +17,7 @@ export function HeroLockup() {
     <img
       src="/wordmark.png"
       alt="Arkeos"
-      className="h-auto w-[min(100%,34rem)] object-contain"
+      className="mx-auto block h-auto w-[min(88vw,26rem)] object-contain"
       draggable={false}
     />
   );

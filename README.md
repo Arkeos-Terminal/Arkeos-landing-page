@@ -1,4 +1,4 @@
-# Arkeos Terminal
+# Arkeos
 
 Coming-soon waitlist and docs for [arkeos.xyz](https://arkeos.xyz).
 
