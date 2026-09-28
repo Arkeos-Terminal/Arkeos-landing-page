@@ -1,42 +1,37 @@
 import { site } from "@/lib/site";
 
-export const aboutLead =
-  "Arkeos is the one-stop place for TCGs on Solana. It tracks on-chain slabs, live machine math, and under-market listings.";
+export const aboutLead = "Arkeos is the one-stop place for TCGs on Solana.";
 
 export const aboutNotes = [
-  "No wallet: gacha machines and under-market listings. Wallet connected: your full binder, cash versus paper, cost, chart, and rip history.",
-  "Cash is what you can sell for tonight — buyback or the best live bid. Paper is insured value and comps.",
+  "Track your collection, see price history of your portfolio and on each slab, follow wallet activity, discover hot gachas, and spot listings under market.",
 ] as const;
 
 export const features = [
   {
+    title: "Collection.",
+    body: "Every slab in your Solana wallet, in one binder. Value, grade, vault, and whether it’s listed.",
+  },
+  {
+    title: "Price history.",
+    body: "Charts on the whole portfolio and on each card.",
+  },
+  {
+    title: "Wallet history.",
+    body: "Rips, buys, sells, and buybacks, with profit and loss.",
+  },
+  {
     title: "Gacha tracker.",
-    body: "Public. Pack price, cash EV, tile EV, profit odds, hit rate, and how top-heavy a machine is — independent of the shop's own tile.",
+    body: "Real tracked EV, profit odds, top heavy percentage. Get notified as soon as a hot gacha is found. Hot gachas are those where you are most likely to pull more than what you bought.",
   },
   {
-    title: "Under-market watcher.",
-    body: "Public. Live asks against insured value and against buyback, with the venue and a link to the listing.",
-  },
-  {
-    title: "Binder.",
-    body: "Every Solana slab in a connected wallet. Each row shows art, name, grade, issuer, vault, whether it's listed, paper, cash, and cost when we know it. Open a slab for chart history, pop, and more. The header shows cash total, paper total, and the gap. Filter by issuer, listed, under-bid, value, and TCG.",
-  },
-  {
-    title: "Chart.",
-    body: "Cash over time, with paper as an option. 1D, 7D, 1M, and max. The series starts when snapshots begin.",
-  },
-  {
-    title: "History.",
-    body: "Rips, buys, sells, and buybacks, with profit and loss against cost.",
+    title: "Under market.",
+    body: "Listings priced under value, with the venue and a link to buy.",
   },
   {
     title: "Share.",
-    body: "Export an image for X — a binder, a PnL chart, pack rips, or one slab's profit history.",
+    body: "Export a binder, a card, or a chart for X.",
   },
 ] as const;
-
-export const later =
-  "Themed binders and showcases. Set-style progress where it maps to real inventory. More Solana issuers, then Polygon and Base. A per-card price page. Trade math. CSV export. Alerts when cash EV flips or an ask goes under the bid.";
 
 export type LegalBlock = {
   heading: string;

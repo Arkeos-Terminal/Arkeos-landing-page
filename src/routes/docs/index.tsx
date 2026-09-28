@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "@/components/docs-shell";
-import { aboutLead, aboutNotes, features, later } from "@/lib/content";
+import { aboutLead, aboutNotes, features } from "@/lib/content";
 
 export const Route = createFileRoute("/docs/")({ component: DocsOverview });
 
@@ -25,11 +25,6 @@ function DocsOverview() {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="mt-14">
-        <SectionLabel>Later</SectionLabel>
-        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-[15px]">{later}</p>
       </div>
     </article>
   );
