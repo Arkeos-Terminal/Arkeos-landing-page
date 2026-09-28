@@ -27,7 +27,7 @@ export function Landing() {
           Coming soon
         </h1>
         <p className="hero-enter hero-enter-d2 mt-5 text-center text-sm leading-relaxed text-muted sm:text-[15px]">
-          <span className="block">Arkeos is the terminal for tokenized TCGs.</span>
+          <span className="block">Arkeos is the one-stop place for TCGs on solana.</span>
           <span className="mt-1 block whitespace-nowrap max-[520px]:whitespace-normal">
             You'll be invited for early access as soon as we launch.
           </span>
