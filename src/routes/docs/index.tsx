@@ -10,22 +10,6 @@ function DocsOverview() {
       <SectionLabel>About</SectionLabel>
       <h1 className="text-3xl font-medium tracking-tight text-fg sm:text-4xl">Arkeos</h1>
       <p className="mt-6 text-sm leading-relaxed text-muted sm:text-[15px]">{aboutLead}</p>
-      {aboutNotes.map((note) => (
-        <p key={note} className="mt-4 text-sm leading-relaxed text-muted sm:text-[15px]">
-          {note}
-        </p>
-      ))}
-
-      <div className="mt-14">
-        <SectionLabel>Features</SectionLabel>
-        <ul className="mt-4 space-y-5">
-          {features.map((feature) => (
-            <li key={feature.title} className="text-sm leading-relaxed text-muted sm:text-[15px]">
-              <span className="font-medium text-fg">{feature.title}</span> {feature.body}
-            </li>
-          ))}
-        </ul>
-      </div>
     </article>
   );
 }
