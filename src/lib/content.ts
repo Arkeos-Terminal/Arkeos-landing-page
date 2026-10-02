@@ -1,37 +1,7 @@
 import { site } from "@/lib/site";
 
-export const aboutLead = "Arkeos is the one-stop place for TCGs on Solana.";
+export const aboutLead = "Arkeos is a new way to interact with onchain TCGs, built for people who rip, flip, and hold. We're not ready to say more yet. The only thing to do right now is join the waitlist and stay tuned for updates. Members will be rewarded at launch.";
 
-export const aboutNotes = [
-  "Track your collection, see price history of your portfolio and on each slab, follow wallet activity, discover hot gachas, and spot listings under market.",
-] as const;
-
-export const features = [
-  {
-    title: "Collection.",
-    body: "Every slab in your Solana wallet, in one binder. Value, grade, vault, and whether it’s listed.",
-  },
-  {
-    title: "Price history.",
-    body: "Charts on the whole portfolio and on each card.",
-  },
-  {
-    title: "Wallet history.",
-    body: "Rips, buys, sells, and buybacks, with profit and loss.",
-  },
-  {
-    title: "Gacha tracker.",
-    body: "Real tracked EV, profit odds, top heavy percentage. Get notified as soon as a hot gacha is found. Hot gachas are those where you are most likely to pull more than what you bought.",
-  },
-  {
-    title: "Under market.",
-    body: "Listings priced under value, with the venue and a link to buy.",
-  },
-  {
-    title: "Share.",
-    body: "Export a binder, a card, or a chart for X.",
-  },
-] as const;
 
 export type LegalBlock = {
   heading: string;
