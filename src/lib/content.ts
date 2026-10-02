@@ -1,6 +1,6 @@
 import { site } from "@/lib/site";
 
-export const aboutLead = "Arkeos is a new way to interact with onchain TCGs, built for people who rip, flip, and hold. We're not ready to say more yet.\\n\\nThe only thing to do right now is join the waitlist and stay tuned for updates. Members will be rewarded at launch.";
+export const aboutLead = "Arkeos is a new way to interact with onchain TCGs, built for people who rip, flip, and hold. We're not ready to say more yet.\n\nThe only thing to do right now is join the waitlist and stay tuned for updates. Members will be rewarded at launch.";
 
 
 export type LegalBlock = {
