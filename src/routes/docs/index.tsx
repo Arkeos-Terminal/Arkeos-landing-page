@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "@/components/docs-shell";
-import { aboutLead, aboutNotes, features } from "@/lib/content";
+import { aboutLead } from "@/lib/content";
 
 export const Route = createFileRoute("/docs/")({ component: DocsOverview });
 
