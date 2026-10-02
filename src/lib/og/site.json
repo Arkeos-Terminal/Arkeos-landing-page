@@ -1,7 +1,7 @@
 {
   "title": "Arkeos",
-  "description": "Arkeos — onchain TCGs, built for people who rip, flip, and hold.",
+  "description": "Arkeos - the one stop place for TCGs on solana",
   "card": "custom",
   "color": "000000",
-  "image": "/linkpreviewcard.png"
+  "image": "/linkpreviewcard.jpg"
 }
