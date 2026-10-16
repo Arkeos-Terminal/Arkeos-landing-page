@@ -1,7 +1,34 @@
 import { site } from "@/lib/site";
 
-export const aboutLead = "Arkeos is a new way to interact with onchain TCGs, built for people who rip, flip, and hold. We're not ready to say more yet.\n\nThe only thing to do right now is join the waitlist and stay tuned for updates. Members will be rewarded at launch.";
+export const aboutLead =
+  "Arkeos tracks your rips and slabs on Solana, shows which gacha machines are worth ripping, and finds listings priced below value.";
 
+export const features = [
+  {
+    title: "Rip History.",
+    body: "Every rip you've done, with your profit or loss, spend vs return, and results by machine and platform.",
+  },
+  {
+    title: "Portfolio.",
+    body: "The slabs in your wallet and what they're worth.",
+  },
+  {
+    title: "Gacha.",
+    body: "Every gacha machine ranked by EV and profit odds, with labels that flag the best ones.",
+  },
+  {
+    title: "Deals.",
+    body: "Slabs listed for less than they're worth, so you can spot deals fast.",
+  },
+  {
+    title: "Sniper.",
+    body: "Coming soon. A bot that opens hot gachas for you, with settings you control.",
+  },
+  {
+    title: "Collections.",
+    body: "Coming soon. Themed collections and set progress.",
+  },
+] as const;
 
 export type LegalBlock = {
   heading: string;
