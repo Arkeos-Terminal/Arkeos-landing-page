@@ -18,9 +18,9 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: site.xHandle },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
-      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=3" },
+      { rel: "icon", type: "image/png", href: "/favicon.png?v=3" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png?v=3" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
