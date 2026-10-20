@@ -5,7 +5,7 @@ export const aboutLead =
 
 export const features = [
   {
-    title: "Rip History.",
+    title: "Scoreboard.",
     body: "Every rip you've done, with your profit or loss, spend vs return, and results by machine and platform.",
   },
   {
@@ -13,20 +13,12 @@ export const features = [
     body: "The slabs in your wallet and what they're worth.",
   },
   {
-    title: "Gacha.",
+    title: "Heat.",
     body: "Every gacha machine ranked by EV and profit odds, with labels that flag the best ones.",
   },
   {
     title: "Deals.",
     body: "Slabs listed for less than they're worth, so you can spot deals fast.",
-  },
-  {
-    title: "Sniper.",
-    body: "Coming soon. A bot that opens hot gachas for you, with settings you control.",
-  },
-  {
-    title: "Collections.",
-    body: "Coming soon. Themed collections and set progress.",
   },
 ] as const;
 
