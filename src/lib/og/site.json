@@ -1,7 +1,7 @@
 {
   "title": "Arkeos",
-  "description": "Arkeos - the one stop place for TCGs on solana",
+  "description": "Arkeos \u2014 the one-stop place for TCGs on Solana",
   "card": "custom",
   "color": "000000",
-  "image": "/linkpreviewcard-v2.jpg"
+  "image": "/og.jpg"
 }
