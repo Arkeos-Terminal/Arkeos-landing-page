@@ -11,10 +11,10 @@ export const site = {
   shortName: "Arkeos",
   url: "https://www.arkeos.xyz",
   description:
-    "Arkeos is the intelligence layer for Solana TCGs. You'll be invited for early access as soon as we launch.",
+    "Arkeos is a gacha platform. Smooth open, games on the rip, quests, and rewards. You'll be invited for early access as soon as we launch.",
   xUrl: "https://x.com/arkeosxyz",
   xHandle: "@arkeosxyz",
   email: "terminal@arkeos.xyz",
   supportEmail: "support@arkeos.xyz",
-  lastUpdated: "09/08/26",
+  lastUpdated: "11/01/26",
 } as const;

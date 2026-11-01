@@ -1,24 +1,32 @@
 import { site } from "@/lib/site";
 
 export const aboutLead =
-  "Arkeos tracks your rips and slabs on Solana, shows which gacha machines are worth ripping, and finds listings priced below value.";
+  "Arkeos is a gacha platform. Smooth open, games on top of the rip, quests that make a bad rip count, and rewards paid from the games and the rips. Same cards as the big platforms. The reason to stay is better UI/UX, the first gacha platform with rakeback, generous rewards, speculative games, collection data, addictive quests, raffles, and much more.";
 
 export const features = [
   {
+    title: "Packs.",
+    body: "The gacha machines. Price, EV, rarity odds, grails in the pack, and profit odds. Each rip gives XP toward the next tier. Open on this site with a wallet or Google. No Arkeos balance.",
+  },
+  {
+    title: "Arcade.",
+    body: "Call the type, or higher or lower. Both hang off a rip, and both are optional.",
+  },
+  {
+    title: "Quests.",
+    body: "Daily and monthly. Fun ones, not a chore list.",
+  },
+  {
     title: "Scoreboard.",
-    body: "Every rip you've done, with your profit or loss, spend vs return, and results by machine and platform.",
+    body: "Your rip history. Spent, returned, up or down, and your best pull.",
   },
   {
-    title: "Portfolio.",
-    body: "The slabs in your wallet and what they're worth.",
+    title: "Collection.",
+    body: "Your slabs, with price, grade, pop, a chart, and recent sales.",
   },
   {
-    title: "Heat.",
-    body: "Every gacha machine ranked by EV and profit odds, with labels that flag the best ones.",
-  },
-  {
-    title: "Deals.",
-    body: "Slabs listed for less than they're worth, so you can spot deals fast.",
+    title: "Rewards.",
+    body: "Rakeback, a rip meter, a streak, a raffle, and weekly and monthly bonuses.",
   },
 ] as const;
 
@@ -34,21 +42,21 @@ export const riskDisclaimer: LegalBlock = {
   updated: site.lastUpdated,
   sections: [
     {
-      title: "1. Arkeos Is Not an Operator",
+      title: "1. What Arkeos Is",
       body: [
-        `Arkeos ("we," "us") is a data and analytics platform. We do not operate, control, custody, or issue any gacha machine, trading card pack, marketplace listing, or vault referenced on Arkeos. All such products are operated by independent third-party platforms (including, without limitation, Collector Crypt, Beezle, and other Solana-based protocols and marketplaces). Arkeos indexes publicly available onchain data from these platforms; we are not a party to any transaction you make on them.`,
+        `Arkeos ("we," "us") is a gacha platform for tokenized trading cards on Solana. Packs opened on Arkeos are Collector Crypt packs: Collector Crypt does the rip, and Arkeos wraps it. Arcade games, quests, and rewards are Arkeos features. Arcade payouts are paid from an Arkeos wallet. We do not custody your slabs, and we do not issue the packs.`,
       ],
     },
     {
       title: "2. Data Is Informational Only — Not a Guarantee",
       body: [
-        `Expected value (EV), "hot"/"cold" machine flags, profit odds, arbitrage alerts, and net worth figures shown on Arkeos are statistical calculations derived from onchain data at a point in time. They describe probabilistic averages, not predictions or guarantees for any individual pull, trade, or sale. A machine flagged as positive-EV can still return a result worth less than what you paid — that is the nature of probability, not an error in our data. Past figures, including historical EV or "hot" streaks, are not indicative of future or individual outcomes. We make reasonable efforts to keep data accurate and current but do not warrant that any figure is complete, error-free, or reflects real-time onchain state at the exact moment you act on it. You are solely responsible for verifying information independently before making any purchase, trade, or sale on a third-party platform.`,
+        `Expected value (EV), profit odds, rarity odds, and slab prices shown on Arkeos are figures at a point in time. They describe averages, not a promise for any single rip, call, or sale. A pack can still return less than you paid. An Arcade call can miss, and a miss keeps the stake. Past results are not indicative of future outcomes. We make reasonable efforts to keep figures current but do not warrant that any figure is complete, error-free, or live at the moment you act on it.`,
       ],
     },
     {
       title: "3. Gacha Mechanics Involve Randomness and Real Financial Risk",
       body: [
-        "Opening a tokenized pack or gacha machine is a randomized mechanic. You may receive an item worth significantly less than the amount you paid. No feature of Arkeos — including EV tracking, profit odds, or arbitrage detection — eliminates this risk or guarantees a profitable outcome. Only spend what you can afford to lose.",
+        "Opening a pack is a randomized mechanic. You may receive a slab worth less than you paid. Arcade games are optional bets on the next rip, priced so the game has an edge. No feature of Arkeos, including EV, profit odds, quests, or rewards, removes that risk or guarantees a profit. Only spend what you can afford to lose.",
       ],
     },
     {
@@ -60,7 +68,7 @@ export const riskDisclaimer: LegalBlock = {
     {
       title: "5. Third-Party Platforms and Assets",
       body: [
-        "We have no control over, and accept no responsibility for, the solvency, security, accuracy, uptime, or conduct of any third-party platform indexed by Arkeos, including their buyback commitments, vaulting arrangements, or ability to fulfill redemptions. Any dispute arising from a transaction on a third-party platform is between you and that platform.",
+        "We have no control over, and accept no responsibility for, the solvency, security, accuracy, uptime, or conduct of Collector Crypt or any other third-party platform you reach through Arkeos, including their buyback commitments, vaulting arrangements, or ability to fulfill redemptions. A dispute about a pack, a slab, or a buyback is between you and that platform.",
       ],
     },
     {
@@ -86,7 +94,7 @@ export const termsOfService: LegalBlock = {
     {
       title: "1. What Arkeos Is",
       body: [
-        "Arkeos is a data and analytics platform for tokenized trading cards and collectibles on Solana. We index publicly available onchain data to surface EV, arbitrage, and portfolio information. We do not operate any gacha machine, marketplace, or vault — those are run by independent third-party platforms. See our Risk Disclaimer for more on this distinction and on data limitations.",
+        "Arkeos is a gacha platform for tokenized trading cards on Solana. Packs are Collector Crypt packs opened through Arkeos. Arcade, quests, and rewards are ours. We do not custody your slabs and we do not issue the packs. See the Risk Disclaimer for how rips, Arcade calls, and the figures on the site can lose you money.",
       ],
     },
     {
