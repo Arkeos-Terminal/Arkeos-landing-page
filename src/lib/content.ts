@@ -1,32 +1,60 @@
 import { site } from "@/lib/site";
 
 export const aboutLead =
-  "Arkeos is a gacha platform. Smooth open, games on top of the rip, quests that make a bad rip count, and rewards paid from the games and the rips. Same cards as the big platforms. The reason to stay is better UI/UX, the first gacha platform with rakeback, generous rewards, speculative games, collection data, addictive quests, raffles, and much more.";
+  "Arkeos is the first gacha platform that pays you to rip. Collect rakeback on every pull, receive weekly and monthly bonuses, and earn tickets for raffles. Every pull is a real graded slab, sell it or keep it.\n\nWe know how a bad pull feels. That's why each pull gets you closer to a free pack, and each pull counts toward a quest for a chance at a bigger rakeback, more rewards, and free tickets for raffles.\n\nFeeling degen? Make a rip more interesting by trying out the arcade.\n\nBuilt for collectors: Check price data, pop, sold listings and more for every slab in your wallet.";
 
 export const features = [
   {
+    title: "Rakeback.",
+    body: "A percent of every rip comes back to you. It builds as you rip. Claim it anytime.",
+  },
+  {
+    title: "Rip Meter.",
+    body: "Hit a rip count, get a free pack. Every rip counts, good or bad.",
+  },
+  {
+    title: "Streak.",
+    body: "Rip daily, earn a raffle entry. A bad pull still keeps your streak.",
+  },
+  {
+    title: "Weekly bonus.",
+    body: "A pool from the week's fees, split by volume. Paid every Monday.",
+  },
+  {
+    title: "Monthly bonus.",
+    body: "A bigger pool, with a floor so one whale can't take it all.",
+  },
+  {
+    title: "Monthly raffle.",
+    body: "Earn tickets from quests and streaks. Win the month's Grail, a real card. You can buy extra tickets.",
+  },
+  {
+    title: "Tiers.",
+    body: "Rips and quests earn XP. Five tiers, unlock exclusive rewards at each.\nQuartz: rakeback, meter, streak raffle\nRuby: monthly bonus\nEmerald: fatter rakeback\nPlatinum: weekly bonus\nDiamond: bonus raffle entries and surprise rewards",
+  },
+  {
     title: "Packs.",
-    body: "The gacha machines. Price, EV, rarity odds, grails in the pack, and profit odds. Each rip gives XP toward the next tier. Open on this site with a wallet or Google. No Arkeos balance.",
+    body: "Every machine with price, EV, rarity odds, grails left, and profit odds, your chance to pull a slab worth more than the pack. Hot machines are flagged. Every pull is a real graded slab. Sell it or keep it.",
   },
   {
     title: "Arcade.",
-    body: "Call the type, or higher or lower. Both hang off a rip, and both are optional.",
+    body: "Optional games on top of a rip. Call the type: pull it and it pays 7x. Up or Down: call the next pull higher or lower, 1.8x.",
+  },
+  {
+    title: "No deposit.",
+    body: "Rip directly from your wallet. Connect Phantom or Solflare, or sign in with Google.",
   },
   {
     title: "Quests.",
-    body: "Daily and monthly. Fun ones, not a chore list.",
+    body: "Daily: complete tasks, earn raffle tickets. Resets at midnight. Monthly: a bigger goal, earn big XP.",
   },
   {
     title: "Scoreboard.",
-    body: "Your rip history. Spent, returned, up or down, and your best pull.",
+    body: "Your rip history. Spent, returned, P&L, best pull, results by machine. Share directly to X.",
   },
   {
     title: "Collection.",
-    body: "Your slabs, with price, grade, pop, a chart, and recent sales.",
-  },
-  {
-    title: "Rewards.",
-    body: "Rakeback, a rip meter, a streak, a raffle, and weekly and monthly bonuses.",
+    body: "Every slab in your wallet with price, grade, pop, price chart, and recent sales. Tap a slab for the detail. Share your bag.",
   },
 ] as const;
 
