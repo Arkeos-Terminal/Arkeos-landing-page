@@ -1,11 +1,11 @@
 import { site } from "@/lib/site";
 
 export const aboutLead =
-  "Arkeos is the first gacha platform that pays you to rip. Collect rakeback on every pull, receive weekly and monthly bonuses, and earn tickets for raffles. Every pull is a real graded slab, sell it or keep it.\n\nWe know how a bad pull feels. That's why each pull gets you closer to a free pack, and each pull counts toward a quest for a chance at a bigger rakeback, more rewards, and free tickets for raffles.\n\nFeeling degen? Make a rip more interesting by trying out the arcade.\n\nBuilt for collectors: Check price data, pop, sold listings and more for every slab in your wallet.";
+  "Arkeos is the first gacha platform that pays you to rip. Collect cashback on every pull, receive weekly and monthly bonuses, and earn tickets for raffles. Every pull is a real graded slab, sell it or keep it.\n\nWe know how a bad pull feels. That's why each pull gets you closer to a free pack, and each pull counts toward a quest for a chance at a bigger cashback, more rewards, and free tickets for raffles.\n\nFeeling degen? Make a rip more interesting by trying out the arcade.\n\nBuilt for collectors: Check price data, pop, sold listings and more for every slab in your wallet.";
 
 export const features = [
   {
-    title: "Rakeback.",
+    title: "Cashback.",
     body: "A percent of every rip comes back to you. It builds as you rip. Claim it anytime.",
   },
   {
@@ -30,7 +30,7 @@ export const features = [
   },
   {
     title: "Tiers.",
-    body: "Rips and quests earn XP. Five tiers, unlock exclusive rewards at each.\nQuartz: rakeback, meter, streak raffle\nRuby: monthly bonus\nEmerald: fatter rakeback\nPlatinum: weekly bonus\nDiamond: bonus raffle entries and surprise rewards",
+    body: "Rips and quests earn XP. Five tiers, unlock exclusive rewards at each.\nQuartz: cashback, meter, streak raffle\nRuby: monthly bonus\nEmerald: fatter cashback\nPlatinum: weekly bonus\nDiamond: bonus raffle entries and surprise rewards",
   },
   {
     title: "Packs.",
