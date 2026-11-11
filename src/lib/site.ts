@@ -14,7 +14,7 @@ export const site = {
     "Arkeos is a gacha platform. Smooth open, games on the rip, quests, and rewards. You'll be invited for early access as soon as we launch.",
   xUrl: "https://x.com/arkeosxyz",
   xHandle: "@arkeosxyz",
-  email: "terminal@arkeos.xyz",
+  email: "gacha@arkeos.xyz",
   supportEmail: "support@arkeos.xyz",
   lastUpdated: "11/01/26",
 } as const;
