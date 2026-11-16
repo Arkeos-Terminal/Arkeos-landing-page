@@ -1,11 +1,11 @@
 import { site } from "@/lib/site";
 
 export const aboutLead =
-  "Arkeos is the first gacha platform that pays you to rip. Collect cashback on every pull, receive weekly and monthly bonuses, and earn tickets for raffles. Every pull is a real graded slab, sell it or keep it.\n\nWe know how a bad pull feels. That's why each pull gets you closer to a free pack, and each pull counts toward a quest for a chance at a bigger cashback, more rewards, and free tickets for raffles.\n\nFeeling degen? Make a rip more interesting by trying out the arcade.\n\nBuilt for collectors: Check price data, pop, sold listings and more for every slab in your wallet.";
+  "Arkeos is the world's first Collectibles Casino, with all the bonuses you know and love.\n\nRakeback on every pull. Weekly boosts and monthly bonuses. Quests, raffles, and free packs. Betting games for degens, built on top of the rip. Gain XP for bigger rewards.\n\nEvery pull is a real graded slab. Sell it or keep it. Powered by Collector Crypt.";
 
 export const features = [
   {
-    title: "Cashback.",
+    title: "Rakeback.",
     body: "A percent of every rip comes back to you. It builds as you rip. Claim it anytime.",
   },
   {
@@ -30,7 +30,7 @@ export const features = [
   },
   {
     title: "Tiers.",
-    body: "Rips and quests earn XP. Five tiers, unlock exclusive rewards at each.\nQuartz: cashback, meter, streak raffle\nRuby: monthly bonus\nEmerald: fatter cashback\nPlatinum: weekly bonus\nDiamond: bonus raffle entries and surprise rewards",
+    body: "Rips and quests earn XP. Five tiers, unlock exclusive rewards at each.\nQuartz: rakeback, meter, streak raffle\nRuby: monthly bonus\nEmerald: fatter rakeback\nPlatinum: weekly bonus\nDiamond: bonus raffle entries and surprise rewards",
   },
   {
     title: "Packs.",
@@ -48,14 +48,6 @@ export const features = [
     title: "Quests.",
     body: "Daily: complete tasks, earn raffle tickets. Resets at midnight. Monthly: a bigger goal, earn big XP.",
   },
-  {
-    title: "Scoreboard.",
-    body: "Your rip history. Spent, returned, P&L, best pull, results by machine. Share directly to X.",
-  },
-  {
-    title: "Collection.",
-    body: "Every slab in your wallet with price, grade, pop, price chart, and recent sales. Tap a slab for the detail. Share your bag.",
-  },
 ] as const;
 
 export type LegalBlock = {
@@ -72,7 +64,7 @@ export const riskDisclaimer: LegalBlock = {
     {
       title: "1. What Arkeos Is",
       body: [
-        `Arkeos ("we," "us") is a gacha platform for tokenized trading cards on Solana. Packs opened on Arkeos are Collector Crypt packs: Collector Crypt does the rip, and Arkeos wraps it. Arcade games, quests, and rewards are Arkeos features. Arcade payouts are paid from an Arkeos wallet. We do not custody your slabs, and we do not issue the packs.`,
+        `Arkeos ("we," "us") is a collectibles casino for tokenized trading cards on Solana. Packs opened on Arkeos are Collector Crypt packs: Collector Crypt does the rip, and Arkeos wraps it. Arcade games, quests, and rewards are Arkeos features. Arcade payouts are paid from an Arkeos wallet. We do not custody your slabs, and we do not issue the packs.`,
       ],
     },
     {
@@ -122,7 +114,7 @@ export const termsOfService: LegalBlock = {
     {
       title: "1. What Arkeos Is",
       body: [
-        "Arkeos is a gacha platform for tokenized trading cards on Solana. Packs are Collector Crypt packs opened through Arkeos. Arcade, quests, and rewards are ours. We do not custody your slabs and we do not issue the packs. See the Risk Disclaimer for how rips, Arcade calls, and the figures on the site can lose you money.",
+        "Arkeos is a collectibles casino for tokenized trading cards on Solana. Packs are Collector Crypt packs opened through Arkeos. Arcade, quests, and rewards are ours. We do not custody your slabs and we do not issue the packs. See the Risk Disclaimer for how rips, Arcade calls, and the figures on the site can lose you money.",
       ],
     },
     {

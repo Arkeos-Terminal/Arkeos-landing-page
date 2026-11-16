@@ -11,7 +11,7 @@ export const site = {
   shortName: "Arkeos",
   url: "https://www.arkeos.xyz",
   description:
-    "Arkeos is a gacha platform. Smooth open, games on the rip, quests, and rewards. You'll be invited for early access as soon as we launch.",
+    "Arkeos is the world's first Collectibles Casino, with all the bonuses you know and love. You'll be invited for early access as soon as we launch.",
   xUrl: "https://x.com/arkeosxyz",
   xHandle: "@arkeosxyz",
   email: "support@arkeos.xyz",
