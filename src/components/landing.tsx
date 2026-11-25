@@ -26,7 +26,7 @@ export function Landing() {
         <h1 className="headline-pop hero-enter hero-enter-d1 mt-8 text-center text-[2.6rem] leading-none sm:mt-10 sm:text-6xl">
           Coming soon
         </h1>
-        <p className="hero-enter hero-enter-d2 mt-6 max-w-xl rounded-2xl border-2 border-[#14110f] bg-white px-5 py-3.5 text-center text-base font-extrabold leading-snug text-[#14110f] shadow-[3px_3px_0_#14110f] sm:text-lg">
+        <p className="subtext-outline hero-enter hero-enter-d2 mt-6 max-w-xl text-center text-base font-extrabold leading-snug sm:text-lg">
           <span className="block">Arkeos is the world's first Collectibles Casino.</span>
           <span className="mt-1 block font-bold">
             You'll be invited for early access as soon as we launch.
