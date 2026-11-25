@@ -15,7 +15,7 @@ export function BrandMark({ className }: { className?: string }) {
 export function HeroLockup() {
   return (
     <img
-      src="/wordmark.png?v=7"
+      src="/wordmark.png?v=8"
       alt="Arkeos"
       className="mx-auto block h-auto w-[min(90vw,32rem)] object-contain"
       draggable={false}

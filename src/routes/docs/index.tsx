@@ -16,7 +16,7 @@ function DocsOverview() {
         <ul className="mt-4 space-y-5">
           {features.map((feature) => (
             <li key={feature.title} className="whitespace-pre-line text-sm leading-relaxed text-muted sm:text-[15px]">
-              <span className="font-display text-fg">{feature.title}</span> {feature.body}
+              <span className="font-sans text-[15px] font-bold text-fg sm:text-base">{feature.title}</span> {feature.body}
             </li>
           ))}
         </ul>
