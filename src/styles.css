@@ -128,6 +128,13 @@
     text-shadow: 0.04em 0.05em 0 #14110f;
   }
 
+  .subtext-outline {
+    color: #fff;
+    -webkit-text-stroke: 0.03em #14110f;
+    paint-order: stroke fill;
+    text-shadow: 0.03em 0.04em 0 #14110f;
+  }
+
   .font-display {
     font-family: var(--font-display);
     font-weight: 400;
