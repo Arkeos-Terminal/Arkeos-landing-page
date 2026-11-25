@@ -23,7 +23,7 @@ export function Landing() {
           <HeroLockup />
         </div>
 
-        <h1 className="hero-enter hero-enter-d1 mt-8 text-center text-[2.35rem] font-medium leading-tight tracking-tight text-fg sm:mt-10 sm:text-5xl">
+        <h1 className="headline-pop hero-enter hero-enter-d1 mt-8 text-center text-[2.6rem] leading-none sm:mt-10 sm:text-6xl">
           Coming soon
         </h1>
         <p className="hero-enter hero-enter-d2 mt-5 text-center text-sm leading-relaxed text-muted sm:text-[15px]">

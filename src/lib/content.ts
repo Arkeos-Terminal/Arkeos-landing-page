@@ -30,11 +30,11 @@ export const features = [
   },
   {
     title: "Tiers.",
-    body: "Rips and quests earn XP. Five tiers, unlock exclusive rewards at each.\nQuartz: rakeback, meter, streak raffle\nRuby: monthly bonus\nEmerald: fatter rakeback\nPlatinum: weekly bonus\nDiamond: bonus raffle entries and surprise rewards",
+    body: "Rips and quests earn XP. Five tiers, unlock exclusive rewards at each.\nUnicorn: rakeback, meter, streak raffle\nPhoenix: monthly bonus\nDragon: fatter rakeback\nGriffin: weekly bonus\nLeviathan: bonus raffle entries and surprise rewards",
   },
   {
     title: "Packs.",
-    body: "Every machine with price, EV, rarity odds, grails left, and profit odds, your chance to pull a slab worth more than the pack. Hot machines are flagged. Every pull is a real graded slab. Sell it or keep it.",
+    body: "Every machine with price, EV, rarity odds, grails left, and profit odds, your chance to pull a slab worth more than the pack. Hot machines are flagged. Every pull is a real graded slab. Sell it or keep it.\n$25 Nova, $50 Radiant, $100 Inferno, $250 Luxe, $500 Royal.",
   },
   {
     title: "Arcade.",

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export function BrandMark({ className }: { className?: string }) {
   return (
     <img
-      src="/logo.svg?v=6"
+      src="/logo.png?v=7"
       alt=""
       className={cn("shrink-0 object-contain", className)}
       draggable={false}
@@ -15,9 +15,9 @@ export function BrandMark({ className }: { className?: string }) {
 export function HeroLockup() {
   return (
     <img
-      src="/wordmark.png?v=6"
+      src="/wordmark.png?v=7"
       alt="Arkeos"
-      className="mx-auto block h-auto w-[min(58vw,18rem)] object-contain"
+      className="mx-auto block h-auto w-[min(90vw,32rem)] object-contain"
       draggable={false}
     />
   );

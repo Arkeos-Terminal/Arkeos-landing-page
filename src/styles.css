@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
-/* Eurostile Round analog — OFL, rounded square-sans. Tracking 800 = 0.8em. */
 @font-face {
-  font-family: "Jura";
-  src: url("/fonts/Jura.ttf") format("truetype");
-  font-weight: 300 700;
+  font-family: "Borsok";
+  src: url("/fonts/Borsok.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-sans: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --font-brand: "Jura", "Eurostile Round", ui-sans-serif, sans-serif;
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Borsok", "Nunito", ui-sans-serif, sans-serif;
+  --font-brand: "Borsok", "Nunito", ui-sans-serif, sans-serif;
 
-  --color-bg: #000000;
-  --color-fg: #f4f4f5;
-  --color-muted: #8b8b94;
-  --color-subtle: #5c5c66;
-  --color-line: rgb(255 255 255 / 0.12);
-  --color-line-strong: rgb(255 255 255 / 0.22);
-  --color-surface: #070708;
-  --color-surface-2: #121214;
-  --color-glow: #ff6a00;
-  --color-glow-deep: #7c3aed;
-  --color-danger: #f87171;
-  --color-ok: #4ade80;
+  --color-bg: #ff7a12;
+  --color-fg: #1a120c;
+  --color-muted: #4a321f;
+  --color-subtle: #6d5342;
+  --color-line: rgb(20 17 15 / 0.14);
+  --color-line-strong: rgb(20 17 15 / 0.28);
+  --color-surface: #fffaf4;
+  --color-surface-2: #fff3e4;
+  --color-glow: #ff6a10;
+  --color-glow-deep: #ffb000;
+  --color-danger: #c4311a;
+  --color-ok: #1f7a3a;
 
   --radius-pill: 999px;
   --radius-card: 1.5rem;
@@ -35,7 +35,7 @@
   --tracking-brand: 0.22em;
   --tracking-lockup: 0.8em;
 
-  --shadow-focus: 0 0 0 3px rgb(168 70 255 / 0.28);
+  --shadow-focus: 0 0 0 3px rgb(255 106 16 / 0.35);
 
   --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --default-transition-duration: 150ms;
@@ -43,7 +43,7 @@
 
 @layer base {
   html {
-    background: #000;
+    background: #ff7a12 url("/bg.jpg") center / cover no-repeat;
     color: var(--color-fg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -51,7 +51,7 @@
 
   body {
     min-height: 100dvh;
-    background: #000;
+    background: transparent;
     font-family: var(--font-sans);
   }
 
@@ -63,6 +63,9 @@
   h1,
   h2,
   h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
     text-wrap: balance;
   }
 
@@ -89,62 +92,46 @@
     text-transform: uppercase;
   }
 
-  /* Solid black top-left, purple across the top-right, orange into the bottom-right. */
+  /* The sunburst. Cover the viewport; the file is 2x so it stays sharp. */
   .glow-field {
-    background:
-      radial-gradient(
-        ellipse 78% 110% at 100% 92%,
-        rgb(255 106 16 / 0.84) 0%,
-        rgb(210 70 0 / 0.44) 32%,
-        rgb(110 36 0 / 0.16) 52%,
-        transparent 70%
-      ),
-      radial-gradient(
-        ellipse 62% 80% at 100% 8%,
-        rgb(168 48 255 / 0.7) 0%,
-        rgb(110 24 190 / 0.32) 38%,
-        transparent 62%
-      ),
-      linear-gradient(
-        108deg,
-        #000000 0%,
-        #000000 42%,
-        rgb(16 4 26) 58%,
-        rgb(96 24 160 / 0.5) 72%,
-        rgb(200 72 8 / 0.38) 88%,
-        transparent 100%
-      ),
-      #000000;
+    background: url("/bg.jpg") center / cover no-repeat;
   }
 
   .docs-chip {
-    background:
-      linear-gradient(#050505, #050505) padding-box,
-      linear-gradient(90deg, #d8b4fe 0%, #a855f7 46%, #ff6a00 100%) border-box;
-    border: 1px solid transparent;
+    background: #fff;
+    border: 2px solid #14110f;
+    box-shadow: 3px 3px 0 #14110f;
   }
 
   .glow-ring {
-    background:
-      linear-gradient(#070708, #070708) padding-box,
-      linear-gradient(90deg, #e9d5ff 0%, #c084fc 42%, #fb923c 100%) border-box;
-    border: 1px solid transparent;
+    background: #fff;
+    border: 2px solid #14110f;
   }
 
   .glow-ring-join {
-    background:
-      linear-gradient(#140814, #100804) padding-box,
-      linear-gradient(90deg, #e9d5ff 0%, #c026d3 42%, #ff6a00 100%) border-box;
-    border: 1.5px solid transparent;
-    box-shadow:
-      0 0 28px rgb(168 48 255 / 0.32),
-      0 0 22px rgb(255 106 0 / 0.34),
-      0 10px 28px rgb(0 0 0 / 0.55);
+    background: #ff6a10;
+    border: 2px solid #14110f;
+    box-shadow: 3px 3px 0 #14110f;
   }
 
   .card-surface {
-    background: rgb(0 0 0 / 0.55);
-    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.12);
+    background: rgb(255 250 244 / 0.94);
+    box-shadow:
+      0 0 0 2px #14110f,
+      5px 5px 0 rgb(20 17 15 / 0.16);
+  }
+
+  .headline-pop {
+    color: #fff;
+    -webkit-text-stroke: 0.045em #14110f;
+    paint-order: stroke fill;
+    text-shadow: 0.04em 0.05em 0 #14110f;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
   }
 
   .hero-enter {
