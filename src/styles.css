@@ -130,9 +130,9 @@
 
   .subtext-outline {
     color: #fff;
-    -webkit-text-stroke: 0.03em #14110f;
+    -webkit-text-stroke: 0.06em #14110f;
     paint-order: stroke fill;
-    text-shadow: 0.03em 0.04em 0 #14110f;
+    text-shadow: 0.05em 0.06em 0 #14110f;
   }
 
   .font-display {
